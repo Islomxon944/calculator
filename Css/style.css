@@ -1,67 +1,113 @@
-html{
+
+
+
+html ,body #fullheight{
+    min-height: 100% !important;
     height: 100%;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
 }
 
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+*{
     padding: 0;
     margin: 0;
-    font-family:"Arial", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #fff;
-    color: #222;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-}
 
 
 /* CONTAINER */
 .container{
-    width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 300px;
+    max-height: 600px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+    margin-top: 50px;
+    height: 100%;
+    background-color: black;
 
 }
 
-
-/* MAIN-CONTENT */
-.main-content{
-    flex-grow: 1;
+.result{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    height: 15%;
 }
 
-.box{
-    height: 757px;
-    background-color: lightcyan;
-    color: #fff;
+.result span{
+    margin-right: 20px;
+    font-size: 70px;
+    justify-self: flex-end;
+
+}
+.buttons{
+    width: 100%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    border-radius: 10px;
+
+}
+
+.item{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 120px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    background-image: linear-gradient(
-        to right bottom,
-        yellow,
-        black
-    );
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    font-size: 20px;
+    color: white;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item:hover{
+    opacity: 0.8;
+}
+.item:active{
+    opacity: 0.6;
+}
+
+.item:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.percent{
+    background-color: #A5A5A5;
+    border: none;
+    color: black;
+}
+
+.item1{
+    background-color: #A5A5A5;
+    border: none;
+}
+.item3{
+    background-color: #ff9f0a;
+    border: none;
+}
+
+.numbers, .comma{
+    background-color: #343434;
+    border: none;
+}
+
+.negative, .clear{
+    color: black;
+}
+
+.itemZero{
+    background-color: #343434;
+    width: 130px;
+    border-radius: 35px;
+    grid-column: span 2;
+    border: none;
 }
